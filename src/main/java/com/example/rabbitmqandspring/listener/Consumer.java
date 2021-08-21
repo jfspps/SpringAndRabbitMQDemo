@@ -14,4 +14,10 @@ public class Consumer {
     public void getMessageMobileQ(Person person){
         System.out.println("Message received with person: " + person.getName());
     }
+
+    // demo of header exchange
+    @RabbitListener(queues = {"TV-q"})
+    public void getMessageTVQ(Person person){
+        System.out.println("Message received with person: " + person.getName());
+    }
 }
